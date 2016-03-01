@@ -1,0 +1,239 @@
+
+$sexyblue : #327CCB;
+$chrome: #F4F4F4;
+$chrome: #F4F4F4;
+
+$Dankgreen : rgba(0, 102, 0, 0.3);
+$Dankblue: rgba(0, 0, 255, 0.3);
+
+* {
+  box-sizing: border-box;
+}
+
+html, body{
+  height: 100%;
+  top: 0;
+  margin: 0;
+  background-image: url(imgs/bg.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.mainwrapper{
+  overflow-x: hidden;
+  height: 100vh;
+  width: auto;
+//  text-align: center;
+  background-color: $Dankgreen;
+}
+
+.welcomewrapper{
+  display: absolute;
+  position: relative;
+  text-align: center;
+  top: 10vh;
+  left: 30vw;
+  width:40vw;
+  height:25vh;
+  border-radius: 25px;
+  //background-color: rgba(244, 244, 244, 0.1);
+  //margin-top: 20%;
+}
+
+.splashtext{
+  font-size: 6rem;
+  color: white;
+  font-weight: bolder;
+}
+
+.logo{
+  //display: inline-block;
+  position: relative;
+  border-radius: 50%;
+  width: 10vw;
+  height: 10vw;
+  top: 20vh;
+  left: 45vw;
+  background-color: $Dankblue;
+  border-style: solid;
+  border-bottom-color: white;
+  border-bottom-width: thick;
+}
+
+.eye{
+  border-radius: 50%;
+  border: 5px solid;
+  border-bottom-color: white;
+  position: relative;
+  display: relative;
+  width:2vw;
+  height:2vh;
+  margin: 2px;
+  left: 25px;
+  top: 20px;
+  background-color: red;
+}
+
+.lefteye{
+  top: 40px;
+}
+.righteye{
+  top: 20px;
+  margin-left: 5vw;
+}
+.menusliderwrapper{
+  border-radius: 5%;
+  position: relative;
+  display: inline-block;
+  background-color: $Dankblue;
+  width: 20vw;
+  height: 15vw;
+  top: 45vh;
+  left: 65vw;  //95vw;
+}
+
+/*.menusliderwrapper:hover{
+  background-color: red;
+  animation-name: menuout;
+  animation-duration: 1s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  animation-timing-function: cubic-bezier(.42, 0, .58, 1);
+}*/
+
+@keyframes menuout{
+  to {
+    transform:translateX(-15vw);
+    border-radius: 5%;
+    background-color: green;
+    opacity: 1;
+    border-bottom-color: white;
+    border-bottom-width: thick;
+  }
+}
+
+.menuitem{
+  display: inline-block;
+  padding: 5px;
+  //position: relative;
+  width: 75px;
+  height:  75px;
+  //background-color: red;
+  //border:3px solid blue;
+  margin: 5px;
+  cursor: pointer;
+}
+
+.menuitem:nth-child(1) {
+    border-color:green;
+    top:0;
+    left:0;
+}
+.menuitem:nth-child(2) {
+    border-color:red;
+    top:0;
+    right:0;
+}
+.menuitem:nth-child(3) {
+    border-color:yellow;
+    bottom:0 !important;
+    left:0;
+}
+.menuitem:nth-child(4) {
+    border-color:pink;
+    bottom:0;
+    right:0;
+}
+
+
+
+.menuwrapper{
+  position: relative;
+  padding: 20px;
+  float: right;
+  display: inline;
+  background-color: $chrome;
+  width: 15vw;
+  height: 15vw;
+}
+
+.toggle{
+  cursor: pointer;
+  position: relative;
+  display: inline-block;
+  border-radius: 5%;
+  padding: 10px;
+  width: 5vw;
+  height: 5vw;
+  background-color: red;
+}
+
+
+/*.toggle{
+  animation-name: menuout;
+  animation-duration: 1s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  animation-timing-function: cubic-bezier(.42, 0, .58, 1);
+}*/
+
+
+.logo:hover{
+  animation-name: changeface;
+  animation-duration: 1s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  animation-timing-function: cubic-bezier(.42, 0, .58, 1);
+}
+
+@keyframes changeface{
+  to {
+    transform: rotate(180deg);
+    border-radius: 50%;
+    background-color: green;
+    opacity: 1;
+    border-bottom-color: white;
+    border-bottom-width: thick;
+  }
+}
+
+
+.followtext{
+  font-size: 3rem;
+  width: 40vw;
+  margin-right: 0px;
+  text-align: center;
+  position: relative;
+  animation-name: textin;
+  animation-duration: 3s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  animation-timing-function: cubic-bezier(.42, 0, .58, 1);
+  opacity: 0;
+  color: white;
+
+}
+
+@keyframes textin{
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.sectiontwowrapper{
+  height: 55vh;
+  background-color: grey;
+}
+
+.modalwrapper{
+  padding-top: 10px;
+}
+
+.boxtext{
+  text-align: center;
+  font-size: 14px;
+}
