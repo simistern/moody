@@ -17,16 +17,18 @@ html, body {
   /* Standard syntax */ }
 
 .welcomewrapper {
-  display: absolute;
+  display: inline-block;
   position: relative;
   text-align: center;
-  top: 10vh;
+  top: 2em;
   width: 100vw;
-  height: 25vh;
+  height: 20em;
   border-radius: 25px; }
 
 .splashtext {
+  width: 100%;
   text-align: center;
+  margin: auto;
   font-size: 6rem;
   color: white;
   font-weight: bolder; }

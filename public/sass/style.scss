@@ -33,20 +33,22 @@ html, body{
 }
 
 .welcomewrapper{
-  display: absolute;
+  display: inline-block;
   position: relative;
   text-align: center;
-  top: 10vh;
+  top: 2em;
   //left: 30vw;
   width:100vw;
-  height:25vh;
+  height:20em;
   border-radius: 25px;
   //background-color: rgba(244, 244, 244, 0.1);
   //margin-top: 20%;
 }
 
 .splashtext{
+  width: 100%;
   text-align: center;
+  margin: auto;
   font-size: 6rem;
   color: white;
   font-weight: bolder;
