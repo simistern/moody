@@ -1,10 +1,13 @@
 
 $sexyblue : #327CCB;
 $chrome: #F4F4F4;
-$chrome: #F4F4F4;
+$testblue: #0066ff;
 
 $Dankgreen : rgba(0, 102, 0, 0.3);
 $Dankblue: rgba(0, 0, 255, 0.3);
+
+$lighterpurple: rgb(166, 77, 255);
+$deepurple: rgb(89, 0, 179);
 
 * {
   box-sizing: border-box;
@@ -14,7 +17,7 @@ html, body{
   height: 100%;
   top: 0;
   margin: 0;
-  background-image: url(imgs/bg.jpg);
+  //background-image: url(imgs/bg.jpg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -24,8 +27,9 @@ html, body{
   overflow-x: hidden;
   height: 100vh;
   width: auto;
+  background: radial-gradient($lighterpurple 2%, $deepurple 98%); /* Standard syntax */
 //  text-align: center;
-  background-color: $Dankgreen;
+//background-color: rgba(244, 244, 244, 0.1);
 }
 
 .welcomewrapper{
@@ -33,8 +37,8 @@ html, body{
   position: relative;
   text-align: center;
   top: 10vh;
-  left: 30vw;
-  width:40vw;
+  //left: 30vw;
+  width:100vw;
   height:25vh;
   border-radius: 25px;
   //background-color: rgba(244, 244, 244, 0.1);
@@ -42,120 +46,95 @@ html, body{
 }
 
 .splashtext{
+  text-align: center;
   font-size: 6rem;
   color: white;
   font-weight: bolder;
 }
 
-.logo{
-  //display: inline-block;
+.followtext{
+  font-size: 3rem;
+  width: 100vw;
+  top: 6vh;
+  text-align: center;
   position: relative;
+  animation-name: textin;
+  animation-duration: 3s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  animation-timing-function: cubic-bezier(.42, 0, .58, 1);
+  opacity: 0;
+  color: white;
+}
+
+.facewrapper{
+  display: inline-block;
+  position: relative;
+  top: 185px;
+  width: 100vw;
+  height: 120px;
+  align-items: center;
+}
+
+.face{
+  //display: inline-block;
+  //position: absolute;
+  margin: 0 auto;
   border-radius: 50%;
-  width: 10vw;
-  height: 10vw;
-  top: 20vh;
-  left: 45vw;
+  width: 15em;
+  height: 15em;
   background-color: $Dankblue;
   border-style: solid;
-  border-bottom-color: white;
-  border-bottom-width: thick;
 }
 
 .eye{
   border-radius: 50%;
-  border: 5px solid;
-  border-bottom-color: white;
+  border: 1px solid;
+  //border-bottom-color: white;
   position: relative;
-  display: relative;
-  width:2vw;
-  height:2vh;
-  margin: 2px;
-  left: 25px;
-  top: 20px;
-  background-color: red;
+display: inline-block;
+  width:1.5em;
+  height:1.5em;
+  margin: 0 auto;
+  left: 3em;
+  top: 2em;
+  background-color: $sexyblue;
 }
 
 .lefteye{
-  top: 40px;
+  margin-left: 0.6em;
 }
 .righteye{
-  top: 20px;
-  margin-left: 5vw;
+  margin-left: 1.6em;
 }
+
+.mouth{
+  display: inline-block;
+  position: relative;
+  width: 40px;
+  height: 40px;
+  top: 12vh;
+  left: 50px;
+  border-radius: 50%;
+  margin-right: 4vw;
+  //background-color: $Dankblue;
+  border: 5px solid;
+  border-top-width: 0;
+  border-left-width: 0;
+  border-right-width: 0;
+
+  border-bottom-color: white;
+}
+
 .menusliderwrapper{
   border-radius: 5%;
   position: relative;
   display: inline-block;
   background-color: $Dankblue;
-  width: 20vw;
-  height: 15vw;
-  top: 45vh;
+  width: 8em;
+  height: 25em;
+  top: 19em;
   left: 65vw;  //95vw;
-}
-
-/*.menusliderwrapper:hover{
-  background-color: red;
-  animation-name: menuout;
-  animation-duration: 1s;
-  animation-iteration-count: 1;
-  animation-fill-mode: forwards;
-  animation-timing-function: cubic-bezier(.42, 0, .58, 1);
-}*/
-
-@keyframes menuout{
-  to {
-    transform:translateX(-15vw);
-    border-radius: 5%;
-    background-color: green;
-    opacity: 1;
-    border-bottom-color: white;
-    border-bottom-width: thick;
-  }
-}
-
-.menuitem{
-  display: inline-block;
-  padding: 5px;
-  //position: relative;
-  width: 75px;
-  height:  75px;
-  //background-color: red;
-  //border:3px solid blue;
-  margin: 5px;
-  cursor: pointer;
-}
-
-.menuitem:nth-child(1) {
-    border-color:green;
-    top:0;
-    left:0;
-}
-.menuitem:nth-child(2) {
-    border-color:red;
-    top:0;
-    right:0;
-}
-.menuitem:nth-child(3) {
-    border-color:yellow;
-    bottom:0 !important;
-    left:0;
-}
-.menuitem:nth-child(4) {
-    border-color:pink;
-    bottom:0;
-    right:0;
-}
-
-
-
-.menuwrapper{
-  position: relative;
-  padding: 20px;
-  float: right;
-  display: inline;
-  background-color: $chrome;
-  width: 15vw;
-  height: 15vw;
 }
 
 .toggle{
@@ -166,9 +145,32 @@ html, body{
   padding: 10px;
   width: 5vw;
   height: 5vw;
-  background-color: red;
+  //background-color: $sexyblue;
 }
 
+.menuwrapper{
+  position: relative;
+  float: right;
+  display: block-inline;
+  width: 8em;
+  height: 25em;
+  top: 19em;
+  left: 27vw;
+  animation-name: menuout;
+  animation-duration: 1.5s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  animation-timing-function: cubic-bezier(.42, 0, .58, 1);
+}
+
+.menuitem{
+  display: inline-block;
+  padding: 1px;
+  width: 75px;
+  height:  75px;
+  margin: 1px;
+  cursor: pointer;
+}
 
 /*.toggle{
   animation-name: menuout;
@@ -178,13 +180,32 @@ html, body{
   animation-timing-function: cubic-bezier(.42, 0, .58, 1);
 }*/
 
-
-.switchlogo{
-  animation-name: changeface;
+/*.menusliderwrapper:hover{
+  background-color: red;
+  animation-name: menuout;
   animation-duration: 1s;
   animation-iteration-count: 1;
   animation-fill-mode: forwards;
   animation-timing-function: cubic-bezier(.42, 0, .58, 1);
+}*/
+
+.switchlogo{
+  animation-name: changeface;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-fill-mode: forwards;
+  animation-timing-function: cubic-bezier(.42, 0, .58, 1);
+}
+
+@keyframes menuout{
+  to {
+    transform:translateX(-10em);
+    border-radius: 5%;
+    //background-color: green;
+    opacity: 1;
+    //border-bottom-color: white;
+  //  border-bottom-width: thick;
+  }
 }
 
 @keyframes changeface{
@@ -198,23 +219,6 @@ html, body{
   }
 }
 
-
-.followtext{
-  font-size: 3rem;
-  width: 40vw;
-  margin-right: 0px;
-  text-align: center;
-  position: relative;
-  animation-name: textin;
-  animation-duration: 3s;
-  animation-iteration-count: 1;
-  animation-fill-mode: forwards;
-  animation-timing-function: cubic-bezier(.42, 0, .58, 1);
-  opacity: 0;
-  color: white;
-
-}
-
 @keyframes textin{
   0% {
     opacity: 0;
@@ -222,18 +226,4 @@ html, body{
   100% {
     opacity: 1;
   }
-}
-
-.sectiontwowrapper{
-  height: 55vh;
-  background-color: grey;
-}
-
-.modalwrapper{
-  padding-top: 10px;
-}
-
-.boxtext{
-  text-align: center;
-  font-size: 14px;
 }

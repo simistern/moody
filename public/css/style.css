@@ -5,7 +5,6 @@ html, body {
   height: 100%;
   top: 0;
   margin: 0;
-  background-image: url(imgs/bg.jpg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat; }
@@ -14,156 +13,28 @@ html, body {
   overflow-x: hidden;
   height: 100vh;
   width: auto;
-  background-color: rgba(0, 102, 0, 0.3); }
+  background: radial-gradient(#a64dff 2%, #5900b3 98%);
+  /* Standard syntax */ }
 
 .welcomewrapper {
   display: absolute;
   position: relative;
   text-align: center;
   top: 10vh;
-  left: 30vw;
-  width: 40vw;
+  width: 100vw;
   height: 25vh;
   border-radius: 25px; }
 
 .splashtext {
+  text-align: center;
   font-size: 6rem;
   color: white;
   font-weight: bolder; }
 
-.logo {
-  position: relative;
-  border-radius: 50%;
-  width: 10vw;
-  height: 10vw;
-  top: 20vh;
-  left: 45vw;
-  background-color: rgba(0, 0, 255, 0.3);
-  border-style: solid;
-  border-bottom-color: white;
-  border-bottom-width: thick; }
-
-.eye {
-  border-radius: 50%;
-  border: 5px solid;
-  border-bottom-color: white;
-  position: relative;
-  display: relative;
-  width: 2vw;
-  height: 2vh;
-  margin: 2px;
-  left: 25px;
-  top: 20px;
-  background-color: red; }
-
-.lefteye {
-  top: 40px; }
-
-.righteye {
-  top: 20px;
-  margin-left: 5vw; }
-
-.menusliderwrapper {
-  border-radius: 5%;
-  position: relative;
-  display: inline-block;
-  background-color: rgba(0, 0, 255, 0.3);
-  width: 20vw;
-  height: 15vw;
-  top: 45vh;
-  left: 65vw; }
-
-/*.menusliderwrapper:hover{
-  background-color: red;
-  animation-name: menuout;
-  animation-duration: 1s;
-  animation-iteration-count: 1;
-  animation-fill-mode: forwards;
-  animation-timing-function: cubic-bezier(.42, 0, .58, 1);
-}*/
-@keyframes menuout {
-  to {
-    transform: translateX(-15vw);
-    border-radius: 5%;
-    background-color: green;
-    opacity: 1;
-    border-bottom-color: white;
-    border-bottom-width: thick; } }
-
-.menuitem {
-  display: inline-block;
-  padding: 5px;
-  width: 75px;
-  height: 75px;
-  margin: 5px;
-  cursor: pointer; }
-
-.menuitem:nth-child(1) {
-  border-color: green;
-  top: 0;
-  left: 0; }
-
-.menuitem:nth-child(2) {
-  border-color: red;
-  top: 0;
-  right: 0; }
-
-.menuitem:nth-child(3) {
-  border-color: yellow;
-  bottom: 0 !important;
-  left: 0; }
-
-.menuitem:nth-child(4) {
-  border-color: pink;
-  bottom: 0;
-  right: 0; }
-
-.menuwrapper {
-  position: relative;
-  padding: 20px;
-  float: right;
-  display: inline;
-  background-color: #F4F4F4;
-  width: 15vw;
-  height: 15vw; }
-
-.toggle {
-  cursor: pointer;
-  position: relative;
-  display: inline-block;
-  border-radius: 5%;
-  padding: 10px;
-  width: 5vw;
-  height: 5vw;
-  background-color: red; }
-
-/*.toggle{
-  animation-name: menuout;
-  animation-duration: 1s;
-  animation-iteration-count: 1;
-  animation-fill-mode: forwards;
-  animation-timing-function: cubic-bezier(.42, 0, .58, 1);
-}*/
-.switchlogo {
-  animation-name: changeface;
-  animation-duration: 1s;
-  animation-iteration-count: 1;
-  animation-fill-mode: forwards;
-  animation-timing-function: cubic-bezier(0.42, 0, 0.58, 1); }
-
-@keyframes changeface {
-  to {
-    transform: rotate(180deg);
-    border-radius: 50%;
-    background-color: green;
-    opacity: 1;
-    border-bottom-color: white;
-    border-bottom-width: thick; } }
-
 .followtext {
   font-size: 3rem;
-  width: 40vw;
-  margin-right: 0px;
+  width: 100vw;
+  top: 6vh;
   text-align: center;
   position: relative;
   animation-name: textin;
@@ -174,19 +45,135 @@ html, body {
   opacity: 0;
   color: white; }
 
+.facewrapper {
+  display: inline-block;
+  position: relative;
+  top: 185px;
+  width: 100vw;
+  height: 120px;
+  align-items: center; }
+
+.face {
+  margin: 0 auto;
+  border-radius: 50%;
+  width: 15em;
+  height: 15em;
+  background-color: rgba(0, 0, 255, 0.3);
+  border-style: solid; }
+
+.eye {
+  border-radius: 50%;
+  border: 1px solid;
+  position: relative;
+  display: inline-block;
+  width: 1.5em;
+  height: 1.5em;
+  margin: 0 auto;
+  left: 3em;
+  top: 2em;
+  background-color: #327CCB; }
+
+.lefteye {
+  margin-left: 0.6em; }
+
+.righteye {
+  margin-left: 1.6em; }
+
+.mouth {
+  display: inline-block;
+  position: relative;
+  width: 40px;
+  height: 40px;
+  top: 12vh;
+  left: 50px;
+  border-radius: 50%;
+  margin-right: 4vw;
+  border: 5px solid;
+  border-top-width: 0;
+  border-left-width: 0;
+  border-right-width: 0;
+  border-bottom-color: white; }
+
+.menusliderwrapper {
+  border-radius: 5%;
+  position: relative;
+  display: inline-block;
+  background-color: rgba(0, 0, 255, 0.3);
+  width: 8em;
+  height: 25em;
+  top: 19em;
+  left: 65vw; }
+
+.toggle {
+  cursor: pointer;
+  position: relative;
+  display: inline-block;
+  border-radius: 5%;
+  padding: 10px;
+  width: 5vw;
+  height: 5vw; }
+
+.menuwrapper {
+  position: relative;
+  float: right;
+  display: block-inline;
+  width: 8em;
+  height: 25em;
+  top: 19em;
+  left: 27vw;
+  animation-name: menuout;
+  animation-duration: 1.5s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  animation-timing-function: cubic-bezier(0.42, 0, 0.58, 1); }
+
+.menuitem {
+  display: inline-block;
+  padding: 1px;
+  width: 75px;
+  height: 75px;
+  margin: 1px;
+  cursor: pointer; }
+
+/*.toggle{
+  animation-name: menuout;
+  animation-duration: 1s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  animation-timing-function: cubic-bezier(.42, 0, .58, 1);
+}*/
+/*.menusliderwrapper:hover{
+  background-color: red;
+  animation-name: menuout;
+  animation-duration: 1s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  animation-timing-function: cubic-bezier(.42, 0, .58, 1);
+}*/
+.switchlogo {
+  animation-name: changeface;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-fill-mode: forwards;
+  animation-timing-function: cubic-bezier(0.42, 0, 0.58, 1); }
+
+@keyframes menuout {
+  to {
+    transform: translateX(-10em);
+    border-radius: 5%;
+    opacity: 1; } }
+
+@keyframes changeface {
+  to {
+    transform: rotate(180deg);
+    border-radius: 50%;
+    background-color: green;
+    opacity: 1;
+    border-bottom-color: white;
+    border-bottom-width: thick; } }
+
 @keyframes textin {
   0% {
     opacity: 0; }
   100% {
     opacity: 1; } }
-
-.sectiontwowrapper {
-  height: 55vh;
-  background-color: grey; }
-
-.modalwrapper {
-  padding-top: 10px; }
-
-.boxtext {
-  text-align: center;
-  font-size: 14px; }
