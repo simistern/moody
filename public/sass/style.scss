@@ -18,9 +18,9 @@ html, body{
   top: 0;
   margin: 0;
   //background-image: url(imgs/bg.jpg);
-  background-size: cover;
+  /*background-size: cover;
   background-position: center;
-  background-repeat: no-repeat;
+  background-repeat: no-repeat; */
 }
 
 .mainwrapper{
@@ -46,9 +46,12 @@ html, body{
 }
 
 .splashtext{
+  font-family: 'Alegreya Sans', sans-serif;
   width: 100%;
+  top: 25em;
   text-align: center;
   margin: auto;
+  margin-top: 100px;
   font-size: 6rem;
   color: white;
   font-weight: bolder;
@@ -57,7 +60,7 @@ html, body{
 .followtext{
   font-size: 3rem;
   width: 100vw;
-  top: 6vh;
+  top: 1em;
   text-align: center;
   position: relative;
   animation-name: textin;
@@ -72,7 +75,7 @@ html, body{
 .facewrapper{
   display: inline-block;
   position: relative;
-  top: 185px;
+  top: 145px;
   width: 100vw;
   height: 120px;
   align-items: center;
@@ -80,13 +83,14 @@ html, body{
 
 .face{
   //display: inline-block;
-  //position: absolute;
+  position: relative;
   margin: 0 auto;
   border-radius: 50%;
-  width: 15em;
-  height: 15em;
+  width: 17em;
+  height: 17em;
   background-color: $Dankblue;
   border-style: solid;
+  box-shadow: 10px 10px 10px 0px rgba(0,0,0,0.75);
 }
 
 .eye{
@@ -94,49 +98,97 @@ html, body{
   border: 1px solid;
   //border-bottom-color: white;
   position: relative;
-display: inline-block;
+  display: inline-block;
   width:1.5em;
   height:1.5em;
   margin: 0 auto;
-  left: 3em;
-  top: 2em;
+  left: (17em / 2) - 4em;
+  top: 3em;
   background-color: $sexyblue;
 }
 
 .lefteye{
-  margin-left: 0.6em;
+//  margin-left: 0.6em;
 }
 .righteye{
-  margin-left: 1.6em;
+  margin-left: (17em / 2) - 4em;
 }
 
 .mouth{
   display: inline-block;
   position: relative;
-  width: 40px;
-  height: 40px;
-  top: 12vh;
-  left: 50px;
-  border-radius: 50%;
+  width: 5em;
+  height: 3em;
+  top: 10em;
+  left: -2em;
+  border-radius: 0 0 5em 5em;
   margin-right: 4vw;
-  //background-color: $Dankblue;
   border: 5px solid;
   border-top-width: 0;
   border-left-width: 0;
   border-right-width: 0;
-
-  border-bottom-color: white;
+  background-color: white;
 }
 
-.menusliderwrapper{
-  border-radius: 5%;
+.menuwrapper{
   position: relative;
   display: inline-block;
-  background-color: $Dankblue;
   width: 8em;
   height: 25em;
-  top: 19em;
-  left: 65vw;  //95vw;
+  left: 30em;//20em;
+}
+
+.menuitem{
+  display: inline-block;
+  padding: 1px;
+  width: 75px;
+  height:  75px;
+  margin: 1px;
+  cursor: pointer;
+}
+
+.menumove{
+  animation-name: menumoveleft;
+  animation-duration: 1.5s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  animation-timing-function: cubic-bezier(.42, 0, .58, 1);
+}
+
+.moveface{
+  animation-name: movefaceleft;
+  animation-duration: 1s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  animation-timing-function: cubic-bezier(.42, 0, .58, 1);
+}
+@keyframes movefaceleft{
+  to {
+    transform: translateX(-4em);
+
+  }
+}
+@keyframes menumoveleft{
+  to {
+    transform:translateX(-10em);
+    opacity: 1;
+  }
+}
+@keyframes textin{
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/*.switchlogo{
+  animation-name: changeface;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-fill-mode: forwards;
+  animation-timing-function: cubic-bezier(.42, 0, .58, 1);
 }
 
 .toggle{
@@ -149,29 +201,15 @@ display: inline-block;
   height: 5vw;
   //background-color: $sexyblue;
 }
-
-.menuwrapper{
+.menusliderwrapper{
+  border-radius: 5%;
   position: relative;
-  float: right;
-  display: block-inline;
+  display: inline-block;
+  background-color: $Dankblue;
   width: 8em;
   height: 25em;
   top: 19em;
-  left: 27vw;
-  animation-name: menuout;
-  animation-duration: 1.5s;
-  animation-iteration-count: 1;
-  animation-fill-mode: forwards;
-  animation-timing-function: cubic-bezier(.42, 0, .58, 1);
-}
-
-.menuitem{
-  display: inline-block;
-  padding: 1px;
-  width: 75px;
-  height:  75px;
-  margin: 1px;
-  cursor: pointer;
+  left: 65vw;  //95vw;
 }
 
 /*.toggle{
@@ -187,14 +225,6 @@ display: inline-block;
   animation-name: menuout;
   animation-duration: 1s;
   animation-iteration-count: 1;
-  animation-fill-mode: forwards;
-  animation-timing-function: cubic-bezier(.42, 0, .58, 1);
-}*/
-
-.switchlogo{
-  animation-name: changeface;
-  animation-duration: 1s;
-  animation-iteration-count: infinite;
   animation-fill-mode: forwards;
   animation-timing-function: cubic-bezier(.42, 0, .58, 1);
 }
@@ -220,12 +250,4 @@ display: inline-block;
     border-bottom-width: thick;
   }
 }
-
-@keyframes textin{
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
+*/
