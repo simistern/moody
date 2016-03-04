@@ -6,7 +6,7 @@ var animateApp = angular.module('animateApp', ['ngRoute', 'ngAnimate']);
 animateApp.config(function($routeProvider) {
     $routeProvider
         // home page
-        .when('/', {
+        .when('/check', {
             templateUrl: 'page-home.html',
             controller: 'mainController'
         })
