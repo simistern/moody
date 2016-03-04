@@ -15,3 +15,14 @@ animateApp.config(function($routeProvider) {
             controller: 'aboutController'
         })
 })
+
+// CONTROLLERS ============================================
+// home page controller
+animateApp.controller('mainController', function($scope) {
+    $scope.pageClass = 'page-home';
+});
+
+// about page controller
+animateApp.controller('aboutController', function($scope) {
+    $scope.pageClass = 'page-about';
+});

@@ -17,42 +17,9 @@
 </head>
 
 <body ng-app="animateApp">
-
+  <a class="list-group-item" href="#/">Link 1
+  <div class="splashtext">MOODY</div>
   <div class="page {{ pageClass }}" ng-view></div>
-  <div class="mainwrapper">
-      <!--div class="toggle" style=" cursor: pointer;"><i class="fa fa-list fa-4x" style=" cursor: pointer;"></i></div-->
-      <div class="welcomewrapper">
-        <div class="splashtext">MOODY</div>
-        <div class="followtext">Your support network in your pocket</div>
-      </div>
-
-      <div class="facewrapper">
-          <div class="face">
-            <span>
-              <div class="eye lefteye"></div>
-              <div class="eye righteye"></div>
-            </span>
-            <div class="mouth"></div>
-          </div>
-      </div>
-
-    <div class="menuwrapper">
-      <div class="menuitem"><i class="fa fa-commenting-o fa-4x"></i><div class="menutext">Check-In</div></div>
-      <div class="menuitem"><i class="fa fa-cogs fa-4x"></i><div class="menutext">Settings</div></div>
-      <div class="menuitem"><i class="fa fa-user fa-4x"></i><div class="menutext">Profile</div></div>
-      <div class="menuitem"><i class="fa fa-slack fa-4x"></i><div class="menutext">Slack</div></div>
-    </div>
-  </div>
-
-  <script>
-    $(function() {
-      $(".face").click(function() {
-        console.log("Check h");
-        $(".face").toggleClass("moveface");
-        $(".menuwrapper").toggleClass("menumove");
-      });
-    });
-  </script>
 
   <!-- Modal
   <div class="sectiontwowrapper">
