@@ -46,7 +46,7 @@ html, body{
 }
 
 .splashtext{
-  font-family: 'Alegreya Sans', sans-serif;
+  //font-family: 'Alegreya Sans', sans-serif;
   width: 100%;
   top: 25em;
   text-align: center;
@@ -89,6 +89,7 @@ html, body{
   width: 17em;
   height: 17em;
   background-color: $Dankblue;
+  background: radial-gradient($sexyblue 1%, $Dankblue 99%); /* Standard syntax */
   border-style: solid;
   box-shadow: 10px 10px 10px 0px rgba(0,0,0,0.75);
 }
@@ -128,6 +129,7 @@ html, body{
   border-left-width: 0;
   border-right-width: 0;
   background-color: white;
+  box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.75);
 }
 
 .menuwrapper{
@@ -139,12 +141,34 @@ html, body{
 }
 
 .menuitem{
+  //font-size: 2em;
+  color: white;
+  font-weight: bolder;
+  font-weight: bolder;
   display: inline-block;
+  text-align: center;
   padding: 1px;
-  width: 75px;
+  width: 125px;
   height:  75px;
-  margin: 1px;
+  //margin: 1px;
+  //margin: 50%;
+  padding-top: 7%;
   cursor: pointer;
+  border: 3px solid blue;
+}
+
+.menutext{
+  display: inline-block;
+  position: absolute;
+  text-align: right;
+  float: right;
+  margin-top: 0.8em;
+  left: 4.5em;
+  //border: 3px solid red;
+}
+
+.menuitem > i{
+  float: left;
 }
 
 .menumove{
