@@ -65,4 +65,35 @@
     border-bottom-width: thick;
   }
 }
-*/
+
+<!-- Modal
+<div class="sectiontwowrapper">
+  <div class="col-md-4 boxtext">check</div>
+  <div class="col-md-4 boxtext">Check</div>
+  <div class="col-md-4 boxtext">Check</div>
+</div>
+  -->
+<!--div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Client Login</h4>
+      </div>
+      <div class="modal-body">
+        <div class="modalwrapper">
+          If you are an existing client, please login below to view your project and site analytics
+          <form>
+          <label>Username </label><input></input>
+          <label>Password </label><input></input>
+          </form>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <p>If you are having trouble logging in, please contact me via email</p>
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Login</button>
+      </div>
+    </div>
+  </div>
+</div-->*/

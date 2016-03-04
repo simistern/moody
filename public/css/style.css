@@ -141,7 +141,7 @@ html, body {
   animation-duration: 1.5s;
   animation-iteration-count: 1;
   animation-fill-mode: forwards;
-  animation-timing-function: cubic-bezier(0.4, 0.96, 0.77, 0.57); }
+  animation-timing-function: cubic-bezier(0.42, 0, 1, 1); }
 
 .moveface {
   animation-name: movefaceleft;
@@ -150,16 +150,57 @@ html, body {
   animation-fill-mode: forwards;
   animation-timing-function: cubic-bezier(0.42, 0, 0.58, 1); }
 
-/* Check in CSS
+/* CHECKIN css
 ================================================================================================
 ================================================================================================ */
 .checkinwrapper {
   overflow-x: hidden;
   height: 100vh;
   width: auto;
-  background: radial-gradient(#F4F4F4 2%, rgba(0, 102, 0, 0.3) 98%);
-  /* Standard syntax */ }
+  background-image: url(imgs/bg.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat; }
 
+.checkintextwrapper {
+  display: inline-block;
+  position: relative;
+  width: 100%;
+  padding-left: 10px;
+  padding-right: 10px;
+  height: 10em;
+  top: 30px;
+  background-color: rgba(0, 102, 0, 0.3); }
+
+.checkintext {
+  display: inline-block;
+  position: relative;
+  text-align: center;
+  width: 100%;
+  color: #F4F4F4;
+  font-size: 3em; }
+
+.optionswrapper {
+  display: inline-block;
+  position: relative;
+  width: 100%;
+  padding: 15px;
+  font-size: 30px;
+  top: 4.8em;
+  color: white;
+  border: 3px solid blue; }
+
+.leftside {
+  float: left;
+  border: 3px solid #F4F4F4; }
+
+.rightside {
+  float: right;
+  border: 3px solid red; }
+
+/* ANIMATION css
+================================================================================================
+================================================================================================ */
 @keyframes movefaceleft {
   to {
     transform: translateX(-4em); } }
@@ -193,6 +234,12 @@ html, body {
     opacity: 0.3;
     -webkit-transform: scale(0.8); } }
 
+@keyframes slideInRight {
+  from {
+    transform: translateX(100%); }
+  to {
+    transform: translateX(0); } }
+
 .ng-enter {
   z-index: 8888; }
 
@@ -209,4 +256,7 @@ html, body {
   animation: rotateFall 1s both ease-in; }
 
 .checkinwrapper.ng-enter {
-  animation: scaleUp 0.5s both ease-in; }
+  animation: slideInRight 0.5s both ease-in; }
+
+.checkinwrapper.ng-leave {
+  animation: slideOutLeft 0.5s both ease-in; }
