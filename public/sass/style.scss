@@ -1,13 +1,4 @@
-
-$sexyblue : #327CCB;
-$chrome: #F4F4F4;
-$testblue: #0066ff;
-
-$Dankgreen : rgba(0, 102, 0, 0.3);
-$Dankblue: rgba(0, 0, 255, 0.3);
-
-$lighterpurple: rgb(166, 77, 255);
-$deepurple: rgb(89, 0, 179);
+@import 'colors';
 
 * {
   box-sizing: border-box;
@@ -17,19 +8,16 @@ html, body{
   height: 100%;
   top: 0;
   margin: 0;
-  //background-image: url(imgs/bg.jpg);
-  /*background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat; */
 }
 
-.mainwrapper{
+/* HOME SCREEN CSS
+================================================================================================
+================================================================================================ */
+.homewrapper{
   overflow-x: hidden;
   height: 100vh;
   width: auto;
   background: radial-gradient($lighterpurple 2%, $deepurple 98%); /* Standard syntax */
-//  text-align: center;
-//background-color: rgba(244, 244, 244, 0.1);
 }
 
 .welcomewrapper{
@@ -37,16 +25,12 @@ html, body{
   position: relative;
   text-align: center;
   top: 2em;
-  //left: 30vw;
   width:100vw;
   height:20em;
   border-radius: 25px;
-  //background-color: rgba(244, 244, 244, 0.1);
-  //margin-top: 20%;
 }
 
 .splashtext{
-  //font-family: 'Alegreya Sans', sans-serif;
   width: 100%;
   top: 25em;
   text-align: center;
@@ -72,6 +56,9 @@ html, body{
   color: white;
 }
 
+/* FACE CSS
+================================================================================================
+================================================================================================ */
 .facewrapper{
   display: inline-block;
   position: relative;
@@ -80,24 +67,20 @@ html, body{
   height: 120px;
   align-items: center;
 }
-
 .face{
-  //display: inline-block;
   position: relative;
   margin: 0 auto;
   border-radius: 50%;
   width: 17em;
   height: 17em;
   background-color: $Dankblue;
-  background: radial-gradient($sexyblue 1%, $Dankblue 99%); /* Standard syntax */
+  background: radial-gradient($sexyblue 1%, $Dankblue 99%);
   border-style: solid;
   box-shadow: 10px 10px 10px 0px rgba(0,0,0,0.75);
 }
-
 .eye{
   border-radius: 50%;
   border: 1px solid;
-  //border-bottom-color: white;
   position: relative;
   display: inline-block;
   width:1.5em;
@@ -107,14 +90,12 @@ html, body{
   top: 3em;
   background-color: $sexyblue;
 }
-
 .lefteye{
-//  margin-left: 0.6em;
+  //margin-left: 0.6em;
 }
 .righteye{
   margin-left: (17em / 2) - 4em;
 }
-
 .mouth{
   display: inline-block;
   position: relative;
@@ -132,6 +113,9 @@ html, body{
   box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.75);
 }
 
+/* MENU CSS
+================================================================================================
+================================================================================================ */
 .menuwrapper{
   position: relative;
   display: inline-block;
@@ -176,7 +160,7 @@ html, body{
   animation-duration: 1.5s;
   animation-iteration-count: 1;
   animation-fill-mode: forwards;
-  animation-timing-function: cubic-bezier(.42, 0, .58, 1);
+  animation-timing-function: cubic-bezier(.4,.96,.77,.57);  //(.42, 0, .58, 1)
 }
 
 .moveface{
@@ -186,18 +170,19 @@ html, body{
   animation-fill-mode: forwards;
   animation-timing-function: cubic-bezier(.42, 0, .58, 1);
 }
-@keyframes movefaceleft{
-  to {
-    transform: translateX(-4em);
 
-  }
+/* Check in CSS
+================================================================================================
+================================================================================================ */
+.checkinwrapper{
+  overflow-x: hidden;
+  height: 100vh;
+  width: auto;
+  background: radial-gradient($chrome 2%, $Dankgreen 98%); /* Standard syntax */
 }
-@keyframes menumoveleft{
-  to {
-    transform:translateX(-10em);
-    opacity: 1;
-  }
-}
+
+@keyframes movefaceleft{ to {transform: translateX(-4em);} }
+@keyframes menumoveleft{ to {transform:translateX(-10em); opacity: 1;}}
 @keyframes textin{
   0% { opacity: 0;}
   100% { opacity: 1;}
@@ -219,75 +204,7 @@ html, body{
 /* page specific animations ------------------------ */
 
 /* home -------------------------- */
-.page-home.ng-enter         { animation: scaleUp 0.5s both ease-in; }
-.page-home.ng-leave         { transform-origin: 0% 0%; animation: rotateFall 1s both ease-in; }
+.homewrapper.ng-enter         { animation: scaleUp 0.5s both ease-in; }
+.homewrapper.ng-leave         { transform-origin: 0% 0%; animation: rotateFall 1s both ease-in; }
 
-
-/*.switchlogo{
-  animation-name: changeface;
-  animation-duration: 1s;
-  animation-iteration-count: infinite;
-  animation-fill-mode: forwards;
-  animation-timing-function: cubic-bezier(.42, 0, .58, 1);
-}
-
-.toggle{
-  cursor: pointer;
-  position: relative;
-  display: inline-block;
-  border-radius: 5%;
-  padding: 10px;
-  width: 5vw;
-  height: 5vw;
-  //background-color: $sexyblue;
-}
-.menusliderwrapper{
-  border-radius: 5%;
-  position: relative;
-  display: inline-block;
-  background-color: $Dankblue;
-  width: 8em;
-  height: 25em;
-  top: 19em;
-  left: 65vw;  //95vw;
-}
-
-/*.toggle{
-  animation-name: menuout;
-  animation-duration: 1s;
-  animation-iteration-count: 1;
-  animation-fill-mode: forwards;
-  animation-timing-function: cubic-bezier(.42, 0, .58, 1);
-}*/
-
-/*.menusliderwrapper:hover{
-  background-color: red;
-  animation-name: menuout;
-  animation-duration: 1s;
-  animation-iteration-count: 1;
-  animation-fill-mode: forwards;
-  animation-timing-function: cubic-bezier(.42, 0, .58, 1);
-}
-
-@keyframes menuout{
-  to {
-    transform:translateX(-10em);
-    border-radius: 5%;
-    //background-color: green;
-    opacity: 1;
-    //border-bottom-color: white;
-  //  border-bottom-width: thick;
-  }
-}
-
-@keyframes changeface{
-  to {
-    transform: rotate(180deg);
-    border-radius: 50%;
-    background-color: green;
-    opacity: 1;
-    border-bottom-color: white;
-    border-bottom-width: thick;
-  }
-}
-*/
+.checkinwrapper.ng-enter         { animation: scaleUp 0.5s both ease-in; }

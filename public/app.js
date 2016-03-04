@@ -1,14 +1,16 @@
 var animateApp = angular.module('animateApp', ['ngRoute', 'ngAnimate']);
 
 // ROUTING ===============================================
-// set our routing for this application
-// each route will pull in a different controller
 animateApp.config(function($routeProvider) {
     $routeProvider
         // home page
-        .when('/check', {
+        .when('/', {
             templateUrl: 'page-home.html',
             controller: 'mainController'
+        })
+        .when('/check', {
+            templateUrl: 'page-checkin.html',
+            controller: 'checkinController'
         })
         .when('/about', {
             templateUrl: 'page-about.html',
@@ -19,10 +21,10 @@ animateApp.config(function($routeProvider) {
 // CONTROLLERS ============================================
 // home page controller
 animateApp.controller('mainController', function($scope) {
-    $scope.pageClass = 'page-home';
+    $scope.pageClass = 'homewrapper';
 });
 
 // about page controller
-animateApp.controller('aboutController', function($scope) {
-    $scope.pageClass = 'page-about';
+animateApp.controller('checkinController', function($scope) {
+    $scope.pageClass = 'checkinwrapper';
 });

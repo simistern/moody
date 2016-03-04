@@ -4,12 +4,12 @@
 html, body {
   height: 100%;
   top: 0;
-  margin: 0;
-  /*background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat; */ }
+  margin: 0; }
 
-.mainwrapper {
+/* HOME SCREEN CSS
+================================================================================================
+================================================================================================ */
+.homewrapper {
   overflow-x: hidden;
   height: 100vh;
   width: auto;
@@ -49,6 +49,9 @@ html, body {
   opacity: 0;
   color: white; }
 
+/* FACE CSS
+================================================================================================
+================================================================================================ */
 .facewrapper {
   display: inline-block;
   position: relative;
@@ -65,7 +68,6 @@ html, body {
   height: 17em;
   background-color: rgba(0, 0, 255, 0.3);
   background: radial-gradient(#327CCB 1%, rgba(0, 0, 255, 0.3) 99%);
-  /* Standard syntax */
   border-style: solid;
   box-shadow: 10px 10px 10px 0px rgba(0, 0, 0, 0.75); }
 
@@ -100,6 +102,9 @@ html, body {
   background-color: white;
   box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.75); }
 
+/* MENU CSS
+================================================================================================
+================================================================================================ */
 .menuwrapper {
   position: relative;
   display: inline-block;
@@ -136,7 +141,7 @@ html, body {
   animation-duration: 1.5s;
   animation-iteration-count: 1;
   animation-fill-mode: forwards;
-  animation-timing-function: cubic-bezier(0.42, 0, 0.58, 1); }
+  animation-timing-function: cubic-bezier(0.4, 0.96, 0.77, 0.57); }
 
 .moveface {
   animation-name: movefaceleft;
@@ -144,6 +149,16 @@ html, body {
   animation-iteration-count: 1;
   animation-fill-mode: forwards;
   animation-timing-function: cubic-bezier(0.42, 0, 0.58, 1); }
+
+/* Check in CSS
+================================================================================================
+================================================================================================ */
+.checkinwrapper {
+  overflow-x: hidden;
+  height: 100vh;
+  width: auto;
+  background: radial-gradient(#F4F4F4 2%, rgba(0, 102, 0, 0.3) 98%);
+  /* Standard syntax */ }
 
 @keyframes movefaceleft {
   to {
@@ -186,77 +201,12 @@ html, body {
 
 /* page specific animations ------------------------ */
 /* home -------------------------- */
-.page-home.ng-enter {
+.homewrapper.ng-enter {
   animation: scaleUp 0.5s both ease-in; }
 
-.page-home.ng-leave {
+.homewrapper.ng-leave {
   transform-origin: 0% 0%;
   animation: rotateFall 1s both ease-in; }
 
-/*.switchlogo{
-  animation-name: changeface;
-  animation-duration: 1s;
-  animation-iteration-count: infinite;
-  animation-fill-mode: forwards;
-  animation-timing-function: cubic-bezier(.42, 0, .58, 1);
-}
-
-.toggle{
-  cursor: pointer;
-  position: relative;
-  display: inline-block;
-  border-radius: 5%;
-  padding: 10px;
-  width: 5vw;
-  height: 5vw;
-  //background-color: $sexyblue;
-}
-.menusliderwrapper{
-  border-radius: 5%;
-  position: relative;
-  display: inline-block;
-  background-color: $Dankblue;
-  width: 8em;
-  height: 25em;
-  top: 19em;
-  left: 65vw;  //95vw;
-}
-
-/*.toggle{
-  animation-name: menuout;
-  animation-duration: 1s;
-  animation-iteration-count: 1;
-  animation-fill-mode: forwards;
-  animation-timing-function: cubic-bezier(.42, 0, .58, 1);
-}*/
-/*.menusliderwrapper:hover{
-  background-color: red;
-  animation-name: menuout;
-  animation-duration: 1s;
-  animation-iteration-count: 1;
-  animation-fill-mode: forwards;
-  animation-timing-function: cubic-bezier(.42, 0, .58, 1);
-}
-
-@keyframes menuout{
-  to {
-    transform:translateX(-10em);
-    border-radius: 5%;
-    //background-color: green;
-    opacity: 1;
-    //border-bottom-color: white;
-  //  border-bottom-width: thick;
-  }
-}
-
-@keyframes changeface{
-  to {
-    transform: rotate(180deg);
-    border-radius: 50%;
-    background-color: green;
-    opacity: 1;
-    border-bottom-color: white;
-    border-bottom-width: thick;
-  }
-}
-*/
+.checkinwrapper.ng-enter {
+  animation: scaleUp 0.5s both ease-in; }

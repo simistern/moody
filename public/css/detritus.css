@@ -1,0 +1,67 @@
+/*.switchlogo{
+  animation-name: changeface;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-fill-mode: forwards;
+  animation-timing-function: cubic-bezier(.42, 0, .58, 1);
+}
+
+.toggle{
+  cursor: pointer;
+  position: relative;
+  display: inline-block;
+  border-radius: 5%;
+  padding: 10px;
+  width: 5vw;
+  height: 5vw;
+  //background-color: $sexyblue;
+}
+.menusliderwrapper{
+  border-radius: 5%;
+  position: relative;
+  display: inline-block;
+  background-color: $Dankblue;
+  width: 8em;
+  height: 25em;
+  top: 19em;
+  left: 65vw;  //95vw;
+}
+
+/*.toggle{
+  animation-name: menuout;
+  animation-duration: 1s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  animation-timing-function: cubic-bezier(.42, 0, .58, 1);
+}*/
+/*.menusliderwrapper:hover{
+  background-color: red;
+  animation-name: menuout;
+  animation-duration: 1s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  animation-timing-function: cubic-bezier(.42, 0, .58, 1);
+}
+
+@keyframes menuout{
+  to {
+    transform:translateX(-10em);
+    border-radius: 5%;
+    //background-color: green;
+    opacity: 1;
+    //border-bottom-color: white;
+  //  border-bottom-width: thick;
+  }
+}
+
+@keyframes changeface{
+  to {
+    transform: rotate(180deg);
+    border-radius: 50%;
+    background-color: green;
+    opacity: 1;
+    border-bottom-color: white;
+    border-bottom-width: thick;
+  }
+}
+*/
