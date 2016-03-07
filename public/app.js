@@ -14,22 +14,42 @@ animateApp.config(function($routeProvider) {
         })
         .when('/settings', {
             templateUrl: 'page-settings.html',
-            controller: 'aboutController'
+            controller: 'settingsController'
         })
-})
+        .when('/profile', {
+            templateUrl: 'page-profile.html',
+            controller: 'profileController'
+        })
+        .when('/presence', {
+            templateUrl: 'page-presence.html',
+            controller: 'profileController'
+        })
+
+});
 
 // CONTROLLERS ============================================
-// home page controller
+// HOME page controller
 animateApp.controller('mainController', function($scope) {
     $scope.pageClass = 'homewrapper';
     //NG-cLOAK
 });
 
-// about page controller
+// CHECK-IN page controller
 animateApp.controller('checkinController', function($scope) {
     $scope.pageClass = 'checkinwrapper';
 });
 
-animateApp.controller('checkinController', function($scope) {
+// SETTINGS page controller
+animateApp.controller('settingsController', function($scope) {
     $scope.pageClass = 'settingswrapper';
+});
+
+// PROFILE page controller
+animateApp.controller('profileController', function($scope) {
+    $scope.pageClass = 'profilewrapper';
+});
+
+// PROFILE page controller
+animateApp.controller('presenceController', function($scope) {
+    $scope.pageClass = 'presencewrapper';
 });
