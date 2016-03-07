@@ -224,6 +224,41 @@ html, body{
   float: right;
   border: 3px solid red;
 }
+
+.settingswrapper{
+  width: 100vw;
+  height: 100vh;
+  background: radial-gradient($sexyblue 2%, $testblue 98%); /* Standard syntax */
+}
+
+.settingsheader{
+  font-family: helvetica;
+  font-size: 35px;
+  font-weight: lighter;
+  margin-left: 20px;
+  padding-top: 20px;
+  margin-bottom: 20px;
+//  border-bottom: 2px solid black;
+}
+.menuheader{
+//  border-bottom: 2px solid black;
+}
+.settings{
+  font-family: helvetica;
+  font-size: 30px;
+  font-weight: lighter;
+  margin-left: 20px;
+  margin-right: 10px;
+}
+
+li {
+  list-style-type: none;
+  margin-top: 10px;
+  margin-bottom: 30px;
+  border-bottom: 1px solid #c3c5cc;
+//  border-top: 1px solid black;
+}
+
 /* ANIMATION css
 ================================================================================================
 ================================================================================================ */

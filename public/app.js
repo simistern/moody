@@ -12,8 +12,8 @@ animateApp.config(function($routeProvider) {
             templateUrl: 'page-checkin.html',
             controller: 'checkinController'
         })
-        .when('/about', {
-            templateUrl: 'page-about.html',
+        .when('/settings', {
+            templateUrl: 'page-settings.html',
             controller: 'aboutController'
         })
 })
@@ -22,9 +22,14 @@ animateApp.config(function($routeProvider) {
 // home page controller
 animateApp.controller('mainController', function($scope) {
     $scope.pageClass = 'homewrapper';
+    //NG-cLOAK
 });
 
 // about page controller
 animateApp.controller('checkinController', function($scope) {
     $scope.pageClass = 'checkinwrapper';
+});
+
+animateApp.controller('checkinController', function($scope) {
+    $scope.pageClass = 'settingswrapper';
 });

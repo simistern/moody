@@ -198,6 +198,33 @@ html, body {
   float: right;
   border: 3px solid red; }
 
+.settingswrapper {
+  width: 100vw;
+  height: 100vh;
+  background: radial-gradient(#327CCB 2%, #0066ff 98%);
+  /* Standard syntax */ }
+
+.settingsheader {
+  font-family: helvetica;
+  font-size: 35px;
+  font-weight: lighter;
+  margin-left: 20px;
+  padding-top: 20px;
+  margin-bottom: 20px; }
+
+.settings {
+  font-family: helvetica;
+  font-size: 30px;
+  font-weight: lighter;
+  margin-left: 20px;
+  margin-right: 10px; }
+
+li {
+  list-style-type: none;
+  margin-top: 10px;
+  margin-bottom: 30px;
+  border-bottom: 1px solid #c3c5cc; }
+
 /* ANIMATION css
 ================================================================================================
 ================================================================================================ */
