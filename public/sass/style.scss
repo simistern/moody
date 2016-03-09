@@ -108,8 +108,8 @@ html, body{
   margin: 0 auto;
   left: (17em / 2) - 4em;
   top: 3em;
-  background-color: $sexyblue;
-  background: radial-gradient($sexyblue 2%, $deepurple 98%); /* Standard syntax */
+  //background-color: $sexyblue;
+  background-color: radial-gradient($sexyblue 2%, $deepurple 98%); /* Standard syntax */
 }
 
 .lefteye{

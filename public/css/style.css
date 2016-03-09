@@ -81,7 +81,7 @@ html, body {
   margin: 0 auto;
   left: 4.5em;
   top: 3em;
-  background-color: #327CCB;
+  //background-color: #327CCB;
   background: radial-gradient(#327CCB 2%, #5900b3 98%);
   /* Standard syntax */ }
 
